@@ -64,7 +64,7 @@ Demo of the dashboard interface:
 Ensure your project files are organized as follows for the server to work correctly:
 
 ```
-/PC-Monitor-Dashboard/
+/Statwell/
 |-- server.py
 |-- config.ini
 |-- start_monitor_startup.bat
