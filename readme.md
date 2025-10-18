@@ -5,6 +5,7 @@ A Real-Time PC Performance Dashboard
 [![Python Version](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
 [![Status](https://img.shields.io/badge/status-stable-green.svg)](https://github.com/)
 
+<a href="https://www.buymeacoffee.com/27Salex" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
 A sleek, modern, and real-time dashboard to monitor your PC's performance stats (CPU, GPU, RAM) through a web interface. Built with Python on the backend and a clean, responsive HTML/CSS/JS frontend.
 
