@@ -13,19 +13,19 @@ Demo of the dashboard interface:
 
 ## Table of Contents
 
-- [✨ Features](#features)
-- [🛠️ Technology Stack](#technology-stack)
-- [🚀 Getting Started](#getting-started)
+- [✨ Features](#-features)
+- [🛠️ Technology Stack](#-technology-stack)
+- [🚀 Getting Started](#-getting-started)
   - [Prerequisites](#prerequisites)
   - [Project Structure](#project-structure)
   - [Installation](#installation)
-- [⚙️ Usage](#usage)
+- [⚙️ Usage](#-usage)
   - [Running the Server](#running-the-server)
   - [Stopping the Server](#stopping-the-server)
-  - [Accessing the Dashboard](#accessing-the-dashboard)
-- [🤖 Automatic Startup on Windows](#automatic-startup-on-windows)
-- [🤝 Contributing](#contributing)
-- [📜 License](#license)
+  - [Accessing the Dashboard](#-accessing-the-dashboard)
+- [🤖 Automatic Startup on Windows](#-automatic-startup-on-windows)
+- [🤝 Contributing](#-contributing)
+- [📜 License](#-license)
 
 ---
 
