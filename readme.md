@@ -13,6 +13,10 @@ This project is designed to be accessible from any device on your local network 
 
 Demo of the dashboard interface:
 
+https://github.com/user-attachments/assets/2ff5134b-6caa-4aeb-9452-a837bacd4ba5
+
+
+
 ## Table of Contents
 
 - [✨ Features](#-features)
