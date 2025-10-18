@@ -104,8 +104,8 @@ To stop the server cleanly, simply double-click the `stop_monitor.bat` script. T
 
 ### Accessing the Dashboard
 
-* **On the host PC:** Open your browser and go to `http://localhost:8080` (or the port you set in `config.ini`).
-* **From another device:** Find your host PC's local IP address (e.g., `192.168.1.100`) and go to `http://YOUR_LOCAL_IP:8080`.
+* **On the host PC:** Open your browser and go to `http://localhost:80` (or the port you set in `config.ini`).
+* **From another device:** Find your host PC's local IP address (e.g., `192.168.1.100`) and go to `http://YOUR_LOCAL_IP:80`.
 
 ---
 
@@ -132,8 +132,8 @@ If you have a suggestion that would make this better, please fork the repo and c
 
 2.  **Clone Your Fork** (replace YOUR_USERNAME)
     ```bash
-    git clone [https://github.com/YOUR_USERNAME/PC-Monitor-Dashboard.git](https://github.com/YOUR_USERNAME/PC-Monitor-Dashboard.git)
-    cd PC-Monitor-Dashboard
+    git clone [https://github.com/YOUR_USERNAME/Statwell.git](https:///github.com/YOUR_USERNAME/Statwell.git)
+    cd Statwell
     ```
 
 3.  **Create your Feature Branch**
