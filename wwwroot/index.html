@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--Made by 27Salex-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Statwell Monitor</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Orbitron:wght@900&display=swap" rel="stylesheet" />
+  </head>
+  <body class="flex items-center justify-center min-h-screen p-2 sm:p-4">
+    <div id="app-container" class="w-full max-w-6xl mx-auto relative">
+      
+      <!-- =================================================================== -->
+      <!-- ======================= MAIN DASHBOARD VIEW ======================= -->
+      <!-- =================================================================== -->
+      <div id="main-view" class="view responsive-overflow">
+        <header class="text-center mb-6">
+          <h1 class="font-orbitron text-3xl sm:text-4xl md:text-5xl font-black tracking-widest uppercase" style="color: #88a1ff; text-shadow: 0 0 8px #88a1ff;">Statwell Monitor</h1>
+          <p id="connection-status" class="text-red-500 mt-2 text-md sm:text-lg">Connecting...</p>
+        </header>
+        
+        <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 responsive-overflow">
+          
+          <!-- WIDGET: CPU -->
+          <div class="dashboard-widget p-4 flex flex-col items-center aspect-square" style="--stat-color: #ff79c6;" data-stat="cpu">
+            <h2 class="font-orbitron text-lg font-bold uppercase hud-title">CPU</h2>
+            <div class="w-full flex-grow relative flex justify-center items-center">
+              <!-- Circular View for CPU -->
+              <div class="gauge-display circular w-full h-full flex justify-center items-center">
+                <svg class="w-full h-full" viewBox="-2 -2 104 54">
+                  <path d="M0 50 A 50 50 0 0 1 100 50" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="4"></path>
+                  <path d="M0 50 A 50 50 0 0 1 100 50" class="gauge-arc-progress" fill="none" stroke="var(--stat-color)" stroke-width="4" pathLength="100" stroke-dasharray="0 100"></path>
+                  <text x="50" y="38" text-anchor="middle" class="font-orbitron text-2xl digital-readout">0%</text>
+                  <text x="50" y="50" text-anchor="middle" class="font-mono text-sm stat-temp" fill="#d9e0ff">--°C</text>
+                </svg>
+              </div>
+              <!-- Bar View for CPU -->
+              <div class="gauge-display bar hidden w-full h-full flex flex-col justify-center items-center px-4">
+                <p class="font-orbitron text-4xl mb-4 digital-readout">0%</p>
+                <div class="bar-container">
+                  <div class="bar-fg"></div>
+                </div>
+                <p class="font-mono text-lg mt-4 stat-temp">--°C</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- WIDGET: GPU -->
+          <div class="dashboard-widget p-4 flex flex-col items-center aspect-square" style="--stat-color: #bd93f9;" data-stat="gpu">
+            <h2 class="font-orbitron text-lg font-bold uppercase hud-title">GPU</h2>
+            <div class="w-full flex-grow relative flex justify-center items-center">
+              <!-- Circular View for GPU -->
+              <div class="gauge-display circular w-full h-full flex justify-center items-center">
+                <svg class="w-full h-full" viewBox="-2 -2 104 54">
+                  <path d="M0 50 A 50 50 0 0 1 100 50" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="4"></path>
+                  <path d="M0 50 A 50 50 0 0 1 100 50" class="gauge-arc-progress" fill="none" stroke="var(--stat-color)" stroke-width="4" pathLength="100" stroke-dasharray="0 100"></path>
+                  <text x="50" y="38" text-anchor="middle" class="font-orbitron text-2xl digital-readout">0%</text>
+                  <text x="50" y="50" text-anchor="middle" class="font-mono text-sm stat-temp" fill="#d9e0ff">--°C</text>
+                </svg>
+              </div>
+              <!-- Bar View for GPU -->
+              <div class="gauge-display bar hidden w-full h-full flex flex-col justify-center items-center px-4">
+                <p class="font-orbitron text-4xl mb-4 digital-readout">0%</p>
+                <div class="bar-container">
+                  <div class="bar-fg"></div>
+                </div>
+                <p class="font-mono text-lg mt-4 stat-temp">--°C</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- WIDGET: RAM -->
+          <div class="dashboard-widget p-4 flex flex-col items-center aspect-square" style="--stat-color: #50fa7b;" data-stat="ram">
+            <h2 class="font-orbitron text-lg font-bold uppercase hud-title">Memory</h2>
+            <div class="w-full flex-grow relative flex justify-center items-center">
+              <!-- Circular View for RAM -->
+              <div class="gauge-display circular w-full h-full flex justify-center items-center">
+                <svg class="w-full h-full" viewBox="-2 -2 104 54">
+                  <path d="M0 50 A 50 50 0 0 1 100 50" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="4"></path>
+                  <path d="M0 50 A 50 50 0 0 1 100 50" class="gauge-arc-progress" fill="none" stroke="var(--stat-color)" stroke-width="4" pathLength="100" stroke-dasharray="0 100"></path>
+                  <text x="50" y="38" text-anchor="middle" class="font-orbitron text-2xl digital-readout">0%</text>
+                  <text x="50" y="50" text-anchor="middle" class="font-mono text-[10px] sm:text-xs stat-usage" fill="#d9e0ff">--/-- GB</text>
+                </svg>
+              </div>
+              <!-- Bar View for RAM -->
+              <div class="gauge-display bar hidden w-full h-full flex flex-col justify-center items-center px-4">
+                <p class="font-orbitron text-4xl mb-4 digital-readout">0%</p>
+                <div class="bar-container">
+                  <div class="bar-fg"></div>
+                </div>
+                <p class="font-mono text-lg mt-4 stat-usage">--/-- GB</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- WIDGET: PEAK TEMPERATURE -->
+          <div class="dashboard-widget p-4 flex flex-col items-center justify-center aspect-square" style="--stat-color: #ff5555;">
+            <h2 class="font-orbitron text-lg font-bold uppercase hud-title">Peak Temp</h2>
+            <p class="font-mono text-sm mb-2">(60s)</p>
+            <p class="font-orbitron text-6xl digital-readout peak-temp">0<span class="text-3xl">°</span></p>
+          </div>
+        </main>
+        
+        <!-- FOOTER CONTROLS -->
+        <footer class="flex justify-center items-center gap-4 mt-6">
+          <button id="show-history-btn" class="nav-button font-bold py-2 px-6 rounded-lg text-lg">History</button>
+          <button id="toggle-gauge-btn" class="nav-button font-bold py-2 px-4 rounded-lg text-lg">View mode: <span id="gauge-type-text">Gauge</span></button>
+        </footer>
+      </div>
+
+      <!-- =================================================================== -->
+      <!-- ======================= HISTORY ANALYSIS VIEW ===================== -->
+      <!-- =================================================================== -->
+      <div id="history-view" class="view hidden p-4">
+        <header class="text-center mb-8">
+          <h1 class="font-orbitron text-3xl sm:text-4xl md:text-5xl font-black tracking-widest uppercase" style="color: #88a1ff; text-shadow: 0 0 8px #88a1ff;">HISTORICAL ANALYSIS</h1>
+        </header>
+        <div class="flex flex-col gap-6 responsive-overflow">
+          <!-- CPU Chart -->
+          <div class="dashboard-widget p-6">
+            <h2 class="text-lg mb-2 font-orbitron text-center uppercase" style="color: #ff79c6; text-shadow: 0 0 8px #ff79c6;">CPU USAGE</h2>
+            <canvas id="cpuChart"></canvas>
+          </div>
+          <!-- GPU Chart -->
+          <div class="dashboard-widget p-6">
+            <h2 class="text-lg mb-2 font-orbitron text-center uppercase" style="color: #bd93f9; text-shadow: 0 0 8px #bd93f9;">GPU USAGE</h2>
+            <canvas id="gpuChart"></canvas>
+          </div>
+        </div>
+        <!-- History View Controls -->
+        <div class="flex justify-center items-center gap-4 mt-8 pb-8">
+          <button id="back-btn" class="nav-button font-bold py-2 px-6 rounded-lg text-lg">Back</button>
+          <button id="refresh-btn" class="nav-button font-bold py-2 px-6 rounded-lg text-lg">Refresh</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
+

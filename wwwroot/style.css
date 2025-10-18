@@ -1,0 +1,92 @@
+@keyframes subtle-grid-pan {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+body {
+    background-color: #01020d;
+    background-image: linear-gradient(rgba(136, 161, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(136, 161, 255, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+    animation: subtle-grid-pan 60s linear infinite;
+    color: #d9e0ff;
+    font-family: "Roboto Mono", monospace;
+}
+.font-orbitron {
+    font-family: "Orbitron", sans-serif;
+}
+
+.dashboard-widget {
+    background: linear-gradient(145deg, #1a1c2c, #10121c);
+    border: 1px solid rgba(136, 161, 255, 0.2);
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), inset 0 1px 1px rgba(255, 255, 255, 0.05);
+    --stat-color: #88a1ff;
+}
+
+.hud-title {
+    color: var(--stat-color);
+    text-shadow: 0 0 8px var(--stat-color);
+    letter-spacing: 2px;
+}
+
+.digital-readout {
+    color: #f0f2ff;
+    text-shadow: 0 0 5px #f0f2ff, 0 0 10px var(--stat-color);
+}
+
+.gauge-arc-progress {
+    transition: stroke-dasharray 0.4s ease-out;
+    filter: drop-shadow(0 0 1px var(--stat-color)) drop-shadow(0 0 1px var(--stat-color));
+}
+
+.bar-container {
+    width: 100%;
+    height: 20px;
+    background: rgba(136, 161, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.bar-fg {
+    background-color: var(--stat-color);
+    width: 0%;
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.4s ease-out;
+    filter: drop-shadow(0 0 3px var(--stat-color)) drop-shadow(0 0 5px var(--stat-color));
+}
+
+.nav-button {
+    background: rgba(40, 40, 60, 0.5);
+    border: 1px solid rgba(136, 161, 255, 0.4);
+    transition: all 0.2s ease-in-out;
+}
+.nav-button:hover {
+    background: rgba(136, 161, 255, 0.2);
+    box-shadow: 0 0 15px rgba(136, 161, 255, 0.7);
+    transform: translateY(-2px);
+}
+
+.view {
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+.responsive-overflow {
+    overflow-y: auto;
+}
+
+.view.hidden {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: scale(0.95);
+}
+.gauge-display.hidden {
+    display: none;
+}
+
