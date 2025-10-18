@@ -1,5 +1,6 @@
 # Statwell Monitor
 A Real-Time PC Performance Dashboard
+
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 [![Python Version](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
 [![Status](https://img.shields.io/badge/status-stable-green.svg)](https://github.com/)
@@ -14,12 +15,12 @@ Demo of the dashboard interface:
 ## Table of Contents
 
 - [✨ Features](#-features)
-- [🛠️ Technology Stack](#-technology-stack)
+- [🛠️ Technology Stack](#%EF%B8%8F-technology-stack)
 - [🚀 Getting Started](#-getting-started)
   - [Prerequisites](#prerequisites)
   - [Project Structure](#project-structure)
   - [Installation](#installation)
-- [⚙️ Usage](#-usage)
+- [⚙️ Usage](#%EF%B8%8F-usage)
   - [Running the Server](#running-the-server)
   - [Stopping the Server](#stopping-the-server)
   - [Accessing the Dashboard](#-accessing-the-dashboard)
@@ -63,7 +64,7 @@ Ensure your project files are organized as follows for the server to work correc
 
 ```
 /PC-Monitor-Dashboard/
-|-- backend.py
+|-- server.py
 |-- config.ini
 |-- start_monitor_startup.bat
 |-- stop_monitor.bat
@@ -91,9 +92,9 @@ Ensure your project files are organized as follows for the server to work correc
 
 ### Running the Server
 
-In a terminal, navigate to the project directory and run the backend script:
+In a terminal, navigate to the project directory and run the server script:
 ```bash
-python backend.py
+python server.py
 ```
 The server will start, and you'll see log messages confirming it's running on the configured host and port.
 
